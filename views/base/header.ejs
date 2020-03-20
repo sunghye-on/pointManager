@@ -1,0 +1,17 @@
+<head>
+    <div>
+        <a href=<%= routes.home %>>home</a>
+    </div>
+    <div>
+        <div>
+            <form action=<%= routes.search %> method="get">
+                <input type="text" placeholder="검색" name="bar">
+            </form>
+            <a href=<%= routes.search %>>search</a>
+        </div>
+        <ul>
+            <a href=<%= routes.join %>><li >join</li></a>
+            <a href=<%= routes.login %>><li >login</li></a>
+        </ul>
+    </div>
+</head>
