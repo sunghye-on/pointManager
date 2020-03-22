@@ -1,8 +1,11 @@
+import { users } from "../db";
+
 //json타입으로 정보를 전달가능
 export const home = (req, res) =>
   res.render("home", {
     length: 5,
-    pageTitle: "home"
+    pageTitle: "home",
+    users
   });
 export const search = (req, res) => {
   const {
