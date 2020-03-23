@@ -7,8 +7,8 @@
     <%- include('./base/header') %>
     <div class="formContain">
       <form action= <%= routes.login %> method="post">
-        <input type="email" name="email" placeholder="이메일(아이디)">
-        <input type="password" name="pw1" placeholder="비밀번호">
+        <input type="email" name="email" placeholder="이메일(아이디)" required=true>
+        <input type="password" name="pw1" placeholder="비밀번호" required=true>
         <input type="submit" value="로그인">
       </form>
     </div>

@@ -8,7 +8,7 @@ import {
 
 module.exports = function(app) {
   app.get(routes.users, users);
-  app.get(routes.userDetail, userDetail);
+  app.get(routes.userDetail(), userDetail);
   app.get(routes.editProfile, editProfile);
   app.get(routes.changePassword, changePassword);
 };

@@ -10,8 +10,21 @@
             <a href=<%= routes.search %>>search</a>
         </div>
         <ul>
-            <a href=<%= routes.join %>><li >join</li></a>
-            <a href=<%= routes.login %>><li >login</li></a>
+            <% if (!user.isAuth) { %>
+                <li >
+                    <a href=<%= routes.join %>>join</a>
+                </li>
+                <li >
+                    <a href=<%= routes.login %>>login</a>
+                </li>
+            <% } else { %>
+                <li >
+                    <a href=<%= routes.userDetail(user.id) %>>내정보</a>
+                </li>
+                <li >
+                    <a href=<%= routes.logout %>>logout</a>
+                </li>
+            <% } %>
         </ul>
     </div>
 </head>

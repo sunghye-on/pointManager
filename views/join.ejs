@@ -7,11 +7,11 @@
     <%- include('./base/header') %>
     <div class="formContain">
       <form action= <%= routes.join %> method="post">
-        <input type="email" name="email" placeholder="이메일(아이디)">
-        <input type="password" name="pw1" placeholder="비밀번호">
-        <input type="password" name="pw2" placeholder="비밀번호 재입력">
-        <input type="text" name="name" placeholder="이름">
-        <input type="number" name="parentPhone" placeholder="부모님 번호">
+        <input type="email" name="email" placeholder="이메일(아이디)" required=true>
+        <input type="password" name="pw1" placeholder="비밀번호" required=true>
+        <input type="password" name="pw2" placeholder="비밀번호 재입력" required=true>
+        <input type="text" name="name" placeholder="이름" required=true>
+        <input type="number" name="parentPhone" placeholder="부모님 번호" required=true>
         <input type="number" name="childPhone" placeholder="아이 번호">
         <input type="submit" value="회원가입하기">
       </form>
