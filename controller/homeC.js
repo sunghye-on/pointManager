@@ -12,5 +12,6 @@ export const search = (req, res) => {
     //term을 searchBy로 해준다. 즉 req.query.term === searchBy
     query: { bar: searchBy }
   } = req;
-  res.render("search", { pageTitle: "Search", searchBy });
+  res.render("search", { pageTitle: "Search", searchBy, users });
 };
+// 회원가입 post로 처리되는 정보들

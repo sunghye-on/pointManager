@@ -7,6 +7,12 @@
     <%- include('./base/header') %>
     <h1>search 입니다</h1>
     <h1><%= searchBy %>의 검색결과</h1>
+    <div class="users">
+      <% users.forEach(props => { %>
+      <h2>이름 : <%= props.name %></h2>
+      <h3>포인트 : <%= props.point %></h3>
+      <% }) %>
+    </div>
   </body>
   <%- include('./base/footer') %>
 </html>
