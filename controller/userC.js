@@ -1,4 +1,5 @@
 import routes from "../routes";
+import User from "../models/User";
 
 export const getJoin = (req, res) =>
   res.render("join", { pageTitle: "회원가입" });
@@ -27,9 +28,23 @@ export const logout = (req, res) => {
 };
 
 export const users = (req, res) => res.render("users", { pageTitle: "users" });
-export const userDetail = (req, res) =>
-  res.render("UserDetail", { pageTitle: "UserDetail" });
+
+export const userDetail = async (req, res) => {
+  const {
+    params: { name }
+  } = req;
+  try {
+    const user = await User.findById(name);
+    // console.log(video);
+    res.render("userDetail", { pageTitle: "내 정보", user });
+  } catch (error) {
+    console.log(`ERROR ❌ ${error}`);
+    res.redirect(routes.home);
+  }
+};
+
 export const editProfile = (req, res) =>
   res.render("editProfile", { pageTitle: "editProfile" });
+
 export const changePassword = (req, res) =>
   res.render("changePassword", { pageTitle: "changePassword" });
